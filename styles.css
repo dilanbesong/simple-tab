@@ -1,0 +1,117 @@
+body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.tabs {
+    position: fixed;
+    display:flex;
+    background-color:rgb(103, 103, 214);
+    align-items: flex-end;
+    height:20px;
+    padding-top: 0.67rem;
+    width: 100%;
+    top: 0;
+}
+
+.tabs .tab, .create {
+    display: flex;
+    flex-basis:50vw;
+    background-color:#ccc;
+    align-self: flex-end;
+    /* border: 1px solid #5d5353; */
+    border-top-left-radius:5px;
+    border-top-right-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    text-indent:4px;
+    font-size: 0.85rem;
+    padding: 0.2rem 0 0.2rem 0;
+}
+ .create{
+    font-size: 1.1rem;
+    font-weight: bolder;
+    height: 15px;
+}
+.tabs .tab span{
+    position: absolute;
+    right: 5%;
+    font-size: 1.2rem;
+    font-weight:bolder;
+    font-stretch: expanded;
+}
+
+.tabs .tab:hover{
+   background-color:#c9bebe;
+   color:#fff;
+}
+
+
+.create button:hover{
+   background-color:#ccc;
+
+}
+.overlay {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+}
+.overlay .slideContainer {
+    position: relative;
+    width: 10vw;
+    height: 8px;
+    border-radius: 8px;
+    background-color: rgb(91, 84, 84);
+    margin-top: 8px;
+}
+.slide {
+    position: absolute;
+    width:0;
+    height: 8px;
+    top:0;
+    left:0;
+    background-color:#fff;
+    border-radius: 8px;
+    animation: progressBar 500ms ease-in 0s infinite alternate-reverse forwards;
+}
+.form {
+    margin-top: 2.5rem;
+    padding-left:2rem;
+}
+.form input {
+    width:90vw;
+    outline: none;
+    border-radius:10px;
+    text-indent: 5px;
+    border: 1px solid #ccc;
+    height: 25px;
+}
+#add {
+    outline: none;
+    border: none;
+    padding: 0.35;
+    cursor: pointer;
+}
+.hide{
+    display: none;
+}
+.allInfo {
+margin-left: 1rem;
+color:green;
+}
+@keyframes progressBar {
+    0%{
+        width:0;
+    }
+    100%{
+        width: 100%;
+    }
+}
